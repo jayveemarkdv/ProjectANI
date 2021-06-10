@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "578380016130",
+    "project_id": "project-ani-8614a",
+    "storage_bucket": "project-ani-8614a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:578380016130:android:6e1937a39b681baaea951b",
+        "android_client_info": {
+          "package_name": "com.example.projectani"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "578380016130-a9jmmghf9u20u22a1k00bjv3ej7aundc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQfbA3XJZj8XQpPp2QGSd8hhEWVReAn7w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "578380016130-a9jmmghf9u20u22a1k00bjv3ej7aundc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
