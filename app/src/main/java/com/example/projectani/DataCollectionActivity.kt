@@ -1,4 +1,4 @@
 package com.example.projectani
 
-class TestActivity {
+class DataCollectionActivity {
 }
