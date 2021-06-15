@@ -5,24 +5,44 @@
 
         <item
             android:id="@+id/nav_dashboard"
-            android:title="Dashboard"
-            android:icon="@drawable/icon_dashboard"/>
+            android:icon="@drawable/icon_dashboard"
+            android:title="Dashboard" />
         <item
             android:id="@+id/nav_datacollection"
-            android:title="Data Collection"
-            android:icon="@drawable/icon_collection"/>
+            android:icon="@drawable/icon_collection"
+            android:title="Data Collection" />
         <item
             android:id="@+id/nav_prediction"
-            android:title="Crop Yield Prediction"
-            android:icon="@drawable/icon_prediction"/>
+            android:icon="@drawable/icon_prediction"
+            android:title="Crop Yield Prediction" />
         <item
             android:id="@+id/nav_factors"
-            android:title="Production Factors"
-            android:icon="@drawable/icon_dashboard"/>
+            android:icon="@drawable/icon_dashboard"
+            android:title="Production Factors" />
         <item
             android:id="@+id/nav_signout"
-            android:title="Sign-out"
-            android:icon="@drawable/icon_dashboard"/>
+            android:icon="@drawable/icon_dashboard"
+            android:title="Sign-out" />
     </group>
+
+    <group android:checkableBehavior="single">
+        <item android:title="Profile">
+            <menu>
+                <item
+                    android:id="@+id/nav_login"
+                    android:icon="@drawable/login_icon"
+                    android:title="Login" />
+                <item
+                    android:id="@+id/nav_profile"
+                    android:icon="@drawable/profile_icon"
+                    android:title="Profile" />
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/logout_icon"
+                    android:title="Logout" />
+            </menu>
+        </item>
+    </group>
+
 
 </menu>
