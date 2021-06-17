@@ -9,18 +9,265 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/white">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ACTIVITY"
-            android:textSize="40sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/dateText"
+            android:layout_width="135dp"
+            android:layout_height="17dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Current date here"
+            android:textColor="#535353"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView2"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.13"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.023" />
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Rainfall Amount"
+            android:textColor="#1A8334"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.656" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Your produce"
+            android:textColor="#1A8334"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.313" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="99dp"
+            android:layout_height="19dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Atok, Benguet"
+            android:textColor="#535353"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.234" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:srcCompat="@drawable/gmapsicon" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Hello Farmer!"
+            android:textSize="24sp"
+            android:textColor="#535353"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.148"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.174" />
+
+        <ScrollView
+            android:layout_width="329dp"
+            android:layout_height="173dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:layout_constraintVertical_bias="0.0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:id="@+id/tblTop10List"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="23dp"
+                    android:stretchColumns="*">
+
+                    <TableRow
+                        android:id="@+id/tableRow1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/tvTopName"
+                            android:layout_width="104dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:height="30sp"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:paddingLeft="8dp"
+                            android:text="Cabbage"
+                            android:textColor="#535353" />
+
+                        <TextView
+                            android:id="@+id/tvTopNumber"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:height="30sp"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:paddingLeft="4dp"
+                            android:text="3.1 mt"
+                            android:textColor="#1A8334" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/tvTop2Name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:height="30sp"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:paddingLeft="8dp"
+                            android:text="Chinese Cabbage"
+                            android:textColor="#535353" />
+
+                        <TextView
+                            android:id="@+id/tvTop2Number"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:height="30sp"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:paddingLeft="4dp"
+                            android:text="2.8 mt"
+                            android:textColor="#1A8334" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/tvTop3Name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:height="30sp"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:paddingLeft="8dp"
+                            android:text="Lettuce"
+                            android:textColor="#535353" />
+
+                        <TextView
+                            android:id="@+id/tvTop3Number"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:height="30sp"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:paddingLeft="4dp"
+                            android:text="2.4 mt"
+                            android:textColor="#1A8334" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow4"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/tvTop4Name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:height="30sp"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:paddingLeft="8dp"
+                            android:text="Potato"
+                            android:textColor="#535353" />
+
+                        <TextView
+                            android:id="@+id/tvTop4Number"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:height="30sp"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:paddingLeft="4dp"
+                            android:text="1.7 mt"
+                            android:textColor="#1A8334" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow5"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/tvTop5Name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:height="30sp"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:paddingLeft="8dp"
+                            android:text="Carrot"
+                            android:textColor="#535353" />
+
+                        <TextView
+                            android:id="@+id/tvTop5Number"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:height="30sp"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:paddingLeft="4dp"
+                            android:text="1.2 mt"
+                            android:textColor="#1A8334" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+        </ScrollView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

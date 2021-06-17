@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectANI">
     <activity
-        android:name="com.example.projectani.LoginActivity"
+        android:name=".LoginActivity"
         android:label="ProjectANI"
         android:theme="@style/Theme.AppCompat" >
         <intent-filter>

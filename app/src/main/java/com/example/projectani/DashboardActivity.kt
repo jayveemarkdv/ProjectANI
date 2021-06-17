@@ -7,7 +7,6 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import androidx.drawerlayout.widget.DrawerLayout
 import java.text.SimpleDateFormat
 
 class DashboardActivity : AppCompatActivity(){
@@ -17,6 +16,11 @@ class DashboardActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val date = findViewById<TextView>(R.id.dateText)
+        val cDate = System.currentTimeMillis()
+        val sdf = SimpleDateFormat("MMM dd, yyyy h:mm a")
+        val dateString = sdf.format(cDate)
+        date.text = dateString
 
         toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
         drawerLayout.addDrawerListener(toggle)
